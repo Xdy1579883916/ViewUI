@@ -70,7 +70,7 @@
         font-size: @font-size-base;
         .popper(@poptip-arrow, @poptip-arrow-width, @poptip-distance, @poptip-arrow-color);
 
-        &[x-placement^="top"] .@{poptip-arrow}:after {
+        &[data-popper-placement^="top"] .@{poptip-arrow}:after {
             content: " ";
             bottom: 1px;
             margin-left: -@poptip-arrow-width;
@@ -79,7 +79,7 @@
             border-top-color: #fff;
         }
 
-        &[x-placement^="right"] .@{poptip-arrow}:after {
+        &[data-popper-placement^="right"] .@{poptip-arrow}:after {
             content: " ";
             left: 1px;
             bottom: -@poptip-arrow-width;
@@ -88,7 +88,7 @@
             border-right-color: #fff;
         }
 
-        &[x-placement^="bottom"] .@{poptip-arrow}:after {
+        &[data-popper-placement^="bottom"] .@{poptip-arrow}:after {
             content: " ";
             top: 1px;
             margin-left: -@poptip-arrow-width;
@@ -97,7 +97,7 @@
             border-bottom-color: #fff;
         }
 
-        &[x-placement^="left"] .@{poptip-arrow}:after {
+        &[data-popper-placement^="left"] .@{poptip-arrow}:after {
             content: " ";
             right: 1px;
             border-right-width: 0;

@@ -6,80 +6,80 @@
     position: absolute;
     z-index: @zindex-tooltip;
 
-    &[x-placement^="top"] {
+    &[data-popper-placement^="top"] {
         padding: @arrow-width 0 @arrow-distance 0;
     }
-    &[x-placement^="right"] {
+    &[data-popper-placement^="right"] {
         padding: 0 @arrow-width 0 @arrow-distance;
     }
-    &[x-placement^="bottom"] {
+    &[data-popper-placement^="bottom"] {
         padding: @arrow-distance 0 @arrow-width 0;
     }
-    &[x-placement^="left"] {
+    &[data-popper-placement^="left"] {
         padding: 0 @arrow-distance 0 @arrow-width;
     }
 
-    &[x-placement^="top"] .@{arrow} {
+    &[data-popper-placement^="top"] .@{arrow} {
         bottom: @arrow-distance - @arrow-width;
         border-width: @arrow-width @arrow-width 0;
         border-top-color: @bg;
     }
-    &[x-placement="top"] .@{arrow} {
+    &[data-popper-placement="top"] .@{arrow} {
         left: 50%;
         margin-left: -@arrow-width;
     }
-    &[x-placement="top-start"] .@{arrow} {
+    &[data-popper-placement="top-start"] .@{arrow} {
         left: 16px;
     }
-    &[x-placement="top-end"] .@{arrow} {
+    &[data-popper-placement="top-end"] .@{arrow} {
         right: 16px;
     }
 
-    &[x-placement^="right"] .@{arrow} {
+    &[data-popper-placement^="right"] .@{arrow} {
         left: @arrow-distance - @arrow-width;
         border-width: @arrow-width @arrow-width @arrow-width 0;
         border-right-color: @bg;
     }
-    &[x-placement="right"] .@{arrow} {
+    &[data-popper-placement="right"] .@{arrow} {
         top: 50%;
         margin-top: -@arrow-width;
     }
-    &[x-placement="right-start"] .@{arrow} {
+    &[data-popper-placement="right-start"] .@{arrow} {
         top: 8px;
     }
-    &[x-placement="right-end"] .@{arrow} {
+    &[data-popper-placement="right-end"] .@{arrow} {
         bottom: 8px;
     }
 
-    &[x-placement^="left"] .@{arrow} {
+    &[data-popper-placement^="left"] .@{arrow} {
         right: @arrow-distance - @arrow-width;
         border-width: @arrow-width 0 @arrow-width @arrow-width;
         border-left-color: @bg;
     }
-    &[x-placement="left"] .@{arrow} {
+    &[data-popper-placement="left"] .@{arrow} {
         top: 50%;
         margin-top: -@arrow-width;
     }
-    &[x-placement="left-start"] .@{arrow} {
+    &[data-popper-placement="left-start"] .@{arrow} {
         top: 8px;
     }
-    &[x-placement="left-end"] .@{arrow} {
+    &[data-popper-placement="left-end"] .@{arrow} {
         bottom: 8px;
     }
 
-    &[x-placement^="bottom"] .@{arrow} {
+    &[data-popper-placement^="bottom"] .@{arrow} {
         top: @arrow-distance - @arrow-width;
         border-width: 0 @arrow-width @arrow-width;
         border-bottom-color: @bg;
     }
-    &[x-placement="bottom"] .@{arrow} {
+    &[data-popper-placement="bottom"] .@{arrow} {
         left: 50%;
         margin-left: -@arrow-width;
     }
-    &[x-placement="bottom-start"] .@{arrow} {
+    &[data-popper-placement="bottom-start"] .@{arrow} {
         left: 16px;
     }
-    &[x-placement="bottom-end"] .@{arrow} {
+    &[data-popper-placement="bottom-end"] .@{arrow} {
         right: 16px;
     }
 }

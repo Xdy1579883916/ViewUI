@@ -3,10 +3,10 @@
 </template>
 <script>
     import Vue from 'vue';
+    import { createPopper } from '@popperjs/core';
+
     const isServer = Vue.prototype.$isServer;
     import { getStyle } from '../../utils/assist';
-    const Popper = isServer ? function() {} : require('popper.js/dist/umd/popper.js');  // eslint-disable-line
-
     import { transferIndex, transferIncrease } from '../../utils/transfer-queue';
 
     export default {
@@ -54,7 +54,7 @@
                         this.popper.update();
                         this.popperStatus = true;
                     } else {
-                        this.popper = new Popper(this.$parent.$refs.reference, this.$el, {
+                        this.popper = createPopper(this.$parent.$refs.reference, this.$el, {
                             eventsEnabled: this.eventsEnabled,
                             placement: this.placement,
                             modifiers: {
@@ -98,7 +98,7 @@
                 // 不判断，Select 会报错，不知道为什么
                 if (!this.popper) return;
 
-                let x_placement = this.popper.popper.getAttribute('x-placement');
+                let x_placement = this.popper.popper.getAttribute('data-popper-placement');
                 let placementStart = x_placement.split('-')[0];
                 let placementEnd = x_placement.split('-')[1];
                 const leftOrRight = x_placement === 'left' || x_placement === 'right';

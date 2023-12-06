@@ -24,7 +24,7 @@
     &-light&-popper{
         .popper(@tooltip-arrow, @tooltip-arrow-width-light, @tooltip-distance-light, @tooltip-arrow-color);
 
-        &[x-placement^="top"] .@{tooltip-arrow}:after {
+        &[data-popper-placement^="top"] .@{tooltip-arrow}:after {
             content: " ";
             bottom: 1px;
             margin-left: -@tooltip-arrow-width-light;
@@ -33,7 +33,7 @@
             border-top-color: #fff;
         }
 
-        &[x-placement^="right"] .@{tooltip-arrow}:after {
+        &[data-popper-placement^="right"] .@{tooltip-arrow}:after {
             content: " ";
             left: 1px;
             bottom: -@tooltip-arrow-width-light;
@@ -42,7 +42,7 @@
             border-right-color: #fff;
         }
 
-        &[x-placement^="bottom"] .@{tooltip-arrow}:after {
+        &[data-popper-placement^="bottom"] .@{tooltip-arrow}:after {
             content: " ";
             top: 1px;
             margin-left: -@tooltip-arrow-width-light;
@@ -51,7 +51,7 @@
             border-bottom-color: #fff;
         }
 
-        &[x-placement^="left"] .@{tooltip-arrow}:after {
+        &[data-popper-placement^="left"] .@{tooltip-arrow}:after {
             content: " ";
             right: 1px;
             border-right-width: 0;

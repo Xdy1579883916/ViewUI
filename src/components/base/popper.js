@@ -3,7 +3,7 @@
  * */
 import Vue from 'vue';
 const isServer = Vue.prototype.$isServer;
-const Popper = isServer ? function() {} : require('popper.js/dist/umd/popper.js');  // eslint-disable-line
+import { createPopper as Popper } from '@popperjs/core';
 
 export default {
     props: {
@@ -89,7 +89,7 @@ export default {
             if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
                 this.popperJS.destroy();
             }
-            
+
             options.eventsEnabled = this.eventsEnabled;
 
             options.placement = this.placement;
@@ -103,7 +103,7 @@ export default {
                 this.$emit('created', this);
             };
 
-            this.popperJS = new Popper(reference, popper, options);
+            this.popperJS = Popper(reference, popper, options);
 
         },
         updatePopper() {
