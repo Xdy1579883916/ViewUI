@@ -4,66 +4,74 @@
 // Definitions: https://github.com/yangdan8/iview.git
 import Vue from 'vue';
 
-export { Affix } from './affix';
-export { Alert } from './alert';
-export { Anchor, AnchorLink } from './anchor';
-export { AutoComplete } from './auto-complete';
-export { Avatar } from './avatar';
-export { BackTop } from './back-top';
-export { Badge } from './badge';
-export { Breadcrumb, BreadcrumbItem } from './breadcrumb';
-export { Button, ButtonGroup } from './button';
-export { Card } from './card';
-export { Carousel, CarouselItem } from './carousel';
-export { Cascader } from './cascader';
-export { Cell, CellGroup } from './cell';
-export { Checkbox, CheckboxGroup } from './checkbox';
-export { Circle, Circle as ICircle } from './circle';
-export { Collapse, CollapsePanel } from './collapse';
-export { ColorPicker } from './color-picker';
-export { Content } from './content';
-export { DatePicker, DatePickerOptions } from './date-picker';
-export { Divider } from './divider';
-export { Drawer } from './drawer';
-export { Dropdown, DropdownMenu, DropdownItem } from './dropdown';
-export { Footer } from './footer';
-export { Form, FormItem } from './form';
-export { Row, Col } from './grid';
-export { Header } from './header';
-export { Icon } from './icon';
-export { Input } from './input';
-export { InputNumber } from './input-number';
-export { Scroll } from './scroll';
-export { Split } from './split';
-export { Layout } from './layout';
-export { LoadingBar, LoadingBarConfig } from './loading-bar';
-export { Menu, MenuGroup, MenuItem, Submenu } from './menu';
-export { Message, MessageConfig } from './message';
-export { Modal, ModalInstance, ModalConfig } from './modal';
-export { Notice, NoticeConfig, NoticeGlobalConfig } from './notice';
-export { Page } from './page';
-export { Poptip } from './poptip';
-export { Progress } from './progress';
-export { Radio, RadioGroup } from './radio';
-export { Rate } from './rate';
-export { Select, Option, OptionGroup } from './select';
-export { Sider } from './sider';
-export { Slider } from './slider';
-export { Spin } from './spin';
-export { Steps, StepsStep } from './steps';
-export { Switch, Switch as ISwitch } from './switch';
-export { Table, TableColumn, TableRenderCreateElementData, TableColumnRenderParams, TableColumnRenderHeadParams, TableExportCsvParams } from './table';
-export { Tabs, TabPane } from './tabs';
-export { Tag } from './tag';
-export { Time } from './time';
-export { Timeline, TimelineItem } from './timeline';
-export { TimePicker } from './time-picker';
-export { Tooltip } from './tooltip';
-export { Transfer } from './transfer';
-export { Tree, TreeChild } from './tree';
-export { Upload } from './upload';
+export {Affix} from './affix';
+export {Alert} from './alert';
+export {Anchor, AnchorLink} from './anchor';
+export {AutoComplete} from './auto-complete';
+export {Avatar} from './avatar';
+export {BackTop} from './back-top';
+export {Badge} from './badge';
+export {Breadcrumb, BreadcrumbItem} from './breadcrumb';
+export {Button, ButtonGroup} from './button';
+export {Card} from './card';
+export {Carousel, CarouselItem} from './carousel';
+export {Cascader} from './cascader';
+export {DxbCascader} from './dxb-cascader';
+export {Cell, CellGroup} from './cell';
+export {Checkbox, CheckboxGroup} from './checkbox';
+export {Circle, Circle as ICircle} from './circle';
+export {Collapse, CollapsePanel} from './collapse';
+export {ColorPicker} from './color-picker';
+export {Content} from './content';
+export {DatePicker, DatePickerOptions} from './date-picker';
+export {Divider} from './divider';
+export {Drawer} from './drawer';
+export {Dropdown, DropdownMenu, DropdownItem} from './dropdown';
+export {Footer} from './footer';
+export {Form, FormItem} from './form';
+export {Row, Col} from './grid';
+export {Header} from './header';
+export {Icon} from './icon';
+export {Input} from './input';
+export {InputNumber} from './input-number';
+export {Scroll} from './scroll';
+export {Split} from './split';
+export {Layout} from './layout';
+export {LoadingBar, LoadingBarConfig} from './loading-bar';
+export {Menu, MenuGroup, MenuItem, Submenu} from './menu';
+export {Message, MessageConfig} from './message';
+export {Modal, ModalInstance, ModalConfig} from './modal';
+export {Notice, NoticeConfig, NoticeGlobalConfig} from './notice';
+export {Page} from './page';
+export {Poptip} from './poptip';
+export {Progress} from './progress';
+export {Radio, RadioGroup} from './radio';
+export {Rate} from './rate';
+export {Select, Option, OptionGroup} from './select';
+export {Sider} from './sider';
+export {Slider} from './slider';
+export {Spin} from './spin';
+export {Steps, StepsStep} from './steps';
+export {Switch, Switch as ISwitch} from './switch';
+export {
+    Table,
+    TableColumn,
+    TableRenderCreateElementData,
+    TableColumnRenderParams,
+    TableColumnRenderHeadParams,
+    TableExportCsvParams
+} from './table';
+export {Tabs, TabPane} from './tabs';
+export {Tag} from './tag';
+export {Time} from './time';
+export {Timeline, TimelineItem} from './timeline';
+export {TimePicker} from './time-picker';
+export {Tooltip} from './tooltip';
+export {Transfer} from './transfer';
+export {Tree, TreeChild} from './tree';
+export {Upload} from './upload';
 
-interface IViewGlobalOptions{
+interface IViewGlobalOptions {
     size?: string;
     transfer?: boolean | string;
     select: {
@@ -119,7 +127,7 @@ interface IViewGlobalOptions{
     };
 }
 
-interface IViewInstallOptions extends IViewGlobalOptions{
+interface IViewInstallOptions extends IViewGlobalOptions {
     locale?: any;
     i18n?: any;
 }
@@ -133,6 +141,75 @@ declare const API: {
         opts: IViewInstallOptions
     ) => void;
     lang: (code: string) => void;
+    assist: {
+        oneOf: (value: any, validList: any) => boolean;
+        camelcaseToHyphen: (str: string) => string;
+        getScrollBarSize: () => number;
+        MutationObserver:
+            | MutationObserver
+            | {
+                  new (callback: MutationCallback): {
+                      observe: Function;
+                      disconnect: Function;
+                  };
+              };
+        getStyle: (
+            element: HTMLElement,
+            styleName: string
+        ) => string;
+        firstUpperCase: (str: string) => string;
+        warnProp: (component: string, prop: string) => void;
+        deepCopy: (source: any) => any;
+        scrollTop: (el: HTMLElement, from?: number, to?: number) => void;
+        findComponentUpward: (
+            context: Vue,
+            componentName: string
+        ) => Vue;
+        findComponentsDownward: (
+            context: Vue,
+            componentName: string
+        ) => Vue[];
+        findComponentsUpward: (
+            context: Vue,
+            componentName: string
+        ) => Vue[];
+        findBrothersComponents: (
+            context: Vue,
+            componentName: string,
+            exceptMe?: boolean
+        ) => Vue[];
+        hasClass: (el: HTMLElement, cls: string) => boolean;
+        addClass: (el: HTMLElement, cls: string) => void;
+        removeClass: (el: HTMLElement, cls: string) => void;
+        setMatchMedia: () => void;
+        dimensionMap: {
+            xs: string;
+            sm: string;
+            md: string;
+            lg: string;
+            xl: string;
+        };
+        sharpMatcherRegx: RegExp;
+    };
+    dom: {
+        on: (element: HTMLElement, event: string, handler: Function) => void;
+        off: (
+            element: HTMLElement,
+            event: string,
+            handler: Function
+        ) => void;
+    },
+    transferQueue: {
+        transferIndex: number;
+        transferIncrease: () => number;
+        lastVisibleIndex: number;
+        lastVisibleIncrease: () => number;
+    },
+    mixinsEmitter: any;
+    mixinsLink: any;
+    mixinsLocale: any;
+    mixinsForm: any;
+    setupDxbModal: any;
 };
 
 export default API;
