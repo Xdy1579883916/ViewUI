@@ -9,6 +9,8 @@ import iView from '../src/index';
 // import locale from '../src/locale/lang/en-US';
 import locale from '../src/locale/lang/zh-CN';
 
+// eslint-disable-next-line no-console
+console.log('iView', iView);
 Vue.use(VueRouter);
 Vue.use(iView, {
     locale,
@@ -238,11 +240,18 @@ const router = new VueRouter({
         {
             path: '/list',
             component: (resolve) => require(['./routers/list.vue'], resolve)
-        }
+        },
+        {
+            path: '/api-modal',
+            component: (resolve) => require(['./routers/api-modal.vue'], resolve)
+        },
     ]
 });
 
-const app = new Vue({
+Vue.prototype.$DxbModal = iView.setupDxbModal({
+    router,
+});
+new Vue({
     router: router,
     render: h => h(App)
 }).$mount('#app');

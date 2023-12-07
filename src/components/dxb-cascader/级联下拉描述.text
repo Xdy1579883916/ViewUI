@@ -1,0 +1,71 @@
+/**
+ @dy
+*/
+
+重写的官方 多级联动组件
+用法与官方一致，新增了可以开启插件功能，点击插件这一行不会触发选中；
+
+一、开启插件行
+
+// 开启插件行的数据
+{
+  label: "新建分组", // 必填
+  plugin: true, // 必填
+  value: "addNewGroup", // 必填
+  render: Function // render函数 选填
+  class: String // 自定义的当行样式
+}
+
+
+// 点击插件行 DxbCascade组件 触发的事件
+@select-plugin="" //{action: "plugin",data: "//点击行的item数据"}
+
+// 返回的数据与官方返回格式一致 例：
+{
+  label: "新建分组",
+  parentId: 0,
+  plugin: true,
+  value: "addNewGroup",
+  __label: "新建分组",
+  __value: "addNewGroup",
+}
+
+
+二、 组件v-model、on-change事件返回的数据可以通过 添加 complete props进行设置返回完整的选择数据
+
+<DxbCascade complete > 或 <DxbCascade complete="true">
+
+三、官方默认样式中支持加入前后插槽语法
+例：
+{
+  label: "新建分组", // 必填
+  value: "addNewGroup", // 必填
+
+  // 前缀插槽 render函数 选填
+  preSlot: h => {
+    return h('DxbIcon', {
+      props: {
+        name: 'iconzengjia',
+        size: '12',
+        color: 'var(--primary-color)',
+        className: "mr10"
+      }
+    })
+  },
+
+  // 后缀插槽 render函数 选填
+  sufSlot: h => {
+    return h('DxbIcon', {
+      props: {
+        name: 'iconzengjia',
+        size: '12',
+        color: 'var(--primary-color)',
+        className: "mr10"
+      }
+    })
+  }
+}
+
+// 点击插槽触发的事件
+@select-suf="" // {action: "suf",data: "//点击行的item数据"}
+@select-pre="" // {action: "pre",data: "//点击行的item数据"}

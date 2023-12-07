@@ -1,6 +1,9 @@
 <template>
     <div style="margin: 100px;width: 200px;">
         <Cascader :data="data" v-model="value1"></Cascader>
+        {{ value1 }}
+        <DxbCascade :data="data" v-model="value2" complete></DxbCascade>
+        {{ value2 }}
     </div>
 </template>
 <script>
@@ -8,6 +11,7 @@
         data () {
             return {
                 value1: [],
+                value2: [],
                 data: [{
                     value: 'beijing',
                     label: '北京',
@@ -55,7 +59,7 @@
                         }
                     ],
                 }]
-            }
+            };
         }
-    }
+    };
 </script>

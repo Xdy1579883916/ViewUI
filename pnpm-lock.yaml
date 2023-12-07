@@ -160,6 +160,9 @@ devDependencies:
   less-loader:
     specifier: ^4.0.6
     version: registry.npmmirror.com/less-loader@4.1.0(less@2.7.3)(webpack@3.12.0)
+  lodash:
+    specifier: ^4.17.21
+    version: registry.npmmirror.com/lodash@4.17.21
   lolex:
     specifier: ^2.7.5
     version: registry.npmmirror.com/lolex@2.7.5
@@ -198,7 +201,7 @@ devDependencies:
     version: registry.npmmirror.com/vue-html-loader@1.2.4
   vue-loader:
     specifier: ^14.2.4
-    version: registry.npmmirror.com/vue-loader@14.2.4(babel-core@6.26.3)(css-loader@0.28.11)(vue-template-compiler@2.7.15)(webpack@3.12.0)
+    version: registry.npmmirror.com/vue-loader@14.2.4(babel-core@6.26.3)(css-loader@0.28.11)(lodash@4.17.21)(vue-template-compiler@2.7.15)(webpack@3.12.0)
   vue-router:
     specifier: ^3.1.3
     version: registry.npmmirror.com/vue-router@3.6.5(vue@2.7.15)
@@ -3423,7 +3426,7 @@ packages:
     version: 1.2.0
     dev: true
 
-  registry.npmmirror.com/consolidate@0.14.5(babel-core@6.26.3):
+  registry.npmmirror.com/consolidate@0.14.5(babel-core@6.26.3)(lodash@4.17.21):
     resolution: {integrity: sha512-PZFskfj64QnpKVK9cPdY36pyWEhZNM+srRVqtwMiVTlnViSoZcvX35PpBhhUcyLTHXYvz7pZRmxvsqwzJqg9kA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/consolidate/-/consolidate-0.14.5.tgz}
     id: registry.npmmirror.com/consolidate/0.14.5
     name: consolidate
@@ -3593,6 +3596,7 @@ packages:
     dependencies:
       babel-core: registry.npmmirror.com/babel-core@6.26.3
       bluebird: registry.npmmirror.com/bluebird@3.7.2
+      lodash: registry.npmmirror.com/lodash@4.17.21
     dev: true
 
   registry.npmmirror.com/constant-case@2.0.0:
@@ -14176,7 +14180,7 @@ packages:
       object-assign: registry.npmmirror.com/object-assign@4.1.1
     dev: true
 
-  registry.npmmirror.com/vue-loader@14.2.4(babel-core@6.26.3)(css-loader@0.28.11)(vue-template-compiler@2.7.15)(webpack@3.12.0):
+  registry.npmmirror.com/vue-loader@14.2.4(babel-core@6.26.3)(css-loader@0.28.11)(lodash@4.17.21)(vue-template-compiler@2.7.15)(webpack@3.12.0):
     resolution: {integrity: sha512-bub2/rcTMJ3etEbbeehdH2Em3G2F5vZIjMK7ZUePj5UtgmZSTtOX1xVVawDpDsy021s3vQpO6VpWJ3z3nO8dDw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-loader/-/vue-loader-14.2.4.tgz}
     id: registry.npmmirror.com/vue-loader/14.2.4
     name: vue-loader
@@ -14190,7 +14194,7 @@ packages:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
-      consolidate: registry.npmmirror.com/consolidate@0.14.5(babel-core@6.26.3)
+      consolidate: registry.npmmirror.com/consolidate@0.14.5(babel-core@6.26.3)(lodash@4.17.21)
       css-loader: registry.npmmirror.com/css-loader@0.28.11
       hash-sum: registry.npmmirror.com/hash-sum@1.0.2
       loader-utils: registry.npmmirror.com/loader-utils@1.4.2

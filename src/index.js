@@ -11,6 +11,7 @@ import Button from './components/button';
 import Card from './components/card';
 import Carousel from './components/carousel';
 import Cascader from './components/cascader';
+import DxbCascade from './components/dxb-cascader/DxbCascade.vue';
 import Cell from './components/cell';
 import Checkbox from './components/checkbox';
 import Circle from './components/circle';
@@ -59,6 +60,16 @@ import Upload from './components/upload';
 import {Row, Col} from './components/grid';
 import {Select, Option, OptionGroup} from './components/select';
 import locale from './locale/index';
+import csv from './utils/csv';
+import * as assist from './utils/assist';
+import * as dom from './utils/dom';
+import * as transferQueue from './utils/transfer-queue';
+import mixinsEmitter from './mixins/emitter';
+import mixinsForm from './mixins/form';
+import mixinsLocale from './mixins/locale';
+import mixinsLink from './mixins/link';
+import setupDxbModal from './components/dxb-modal';
+
 
 const components = {
     Affix,
@@ -77,6 +88,7 @@ const components = {
     Carousel,
     CarouselItem: Carousel.Item,
     Cascader,
+    DxbCascade,
     Cell,
     CellGroup: Cell.Group,
     Checkbox,
@@ -246,7 +258,16 @@ const API = {
     install,
     Circle,
     Switch,
-    ...components
+    ...components,
+    csv,
+    assist,
+    dom,
+    transferQueue,
+    mixinsEmitter,
+    mixinsLink,
+    mixinsLocale,
+    mixinsForm,
+    setupDxbModal
 };
 
 API.lang = (code) => {

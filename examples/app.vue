@@ -59,6 +59,7 @@
                 <span><router-link to="/drawer">Drawer</router-link></span>
                 <span><router-link to="/icon">Icon</router-link></span>
                 <span><router-link to="/list">List</router-link></span>
+                <span><router-link to="/api-modal">店小宝 modal</router-link></span>
             </div>
         </div>
         <div style="margin: 50px">
