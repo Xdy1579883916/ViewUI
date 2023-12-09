@@ -13,7 +13,7 @@ function lessFmt() {
             browsers: ['last 2 versions', 'ie > 8']
         }))
         .pipe(cleanCSS())
-        .pipe(rename(`iview${pkg.version}.css`))
+        .pipe(rename(`iview@${pkg.version}.css`))
         .pipe(gulp.dest('../dist'));
 }
 
