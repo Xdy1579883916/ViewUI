@@ -3,6 +3,7 @@ const cleanCSS = require('gulp-clean-css');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+const pkg = require('../package.json');
 
 // 编译less
 function lessFmt() {
@@ -12,8 +13,8 @@ function lessFmt() {
             browsers: ['last 2 versions', 'ie > 8']
         }))
         .pipe(cleanCSS())
-        .pipe(rename('iview.css'))
-        .pipe(gulp.dest('../dist/styles'));
+        .pipe(rename(`iview${pkg.version}.css`))
+        .pipe(gulp.dest('../dist'));
 }
 
 // 拷贝字体文件
@@ -22,4 +23,4 @@ function fontsFmt() {
         .pipe(gulp.dest('../dist/styles/fonts'));
 }
 
-gulp.task('default', gulp.series(lessFmt, fontsFmt));
+gulp.task('default', gulp.series(lessFmt));

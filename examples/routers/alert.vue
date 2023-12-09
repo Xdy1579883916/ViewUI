@@ -64,9 +64,7 @@
     </div>
 </template>
 <script>
-    import { Alert, Icon } from 'iview';
     export default {
-        components: { Alert, Icon },
         data () {
             return {
                 show: true
