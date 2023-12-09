@@ -1,7 +1,7 @@
 @cascader-prefix-cls: ~"@{css-prefix}cascader";
 @cascader-item-prefix-cls: ~"@{css-prefix}cascader-menu-item";
 
-.selectDropDown{
+.selectDropDown {
     width: auto;
     padding: 0;
     white-space: nowrap;
@@ -12,22 +12,23 @@
     //position: relative;
     line-height: normal;
 
-    &-rel{
+    &-rel {
         display: inline-block;
         width: 100%;
         position: relative;
     }
 
-    .@{css-prefix}input{
+    .@{css-prefix}input {
         padding-right: 24px;
         display: block;
         cursor: pointer;
     }
-    &-disabled .@{css-prefix}input{
+
+    &-disabled .@{css-prefix}input {
         cursor: @cursor-disabled;
     }
 
-    &-label{
+    &-label {
         width: 100%;
         height: 100%;
         line-height: 32px;
@@ -42,11 +43,13 @@
         left: 0;
         top: 0;
     }
-    &-size-large &-label{
+
+    &-size-large &-label {
         line-height: 36px;
         font-size: @font-size-base;
     }
-    &-size-small &-label{
+
+    &-size-small &-label {
         line-height: 26px;
     }
 
@@ -60,13 +63,15 @@
             display: inline-block;
         }
     }
-    &-show-clear:hover .@{cascader-prefix-cls}-arrow:nth-of-type(2){
+
+    &-show-clear:hover .@{cascader-prefix-cls}-arrow:nth-of-type(2) {
         display: none;
     }
 
     &-arrow {
         .inner-arrow();
     }
+
     &-visible &-arrow:nth-of-type(2) {
         transform: translateY(-50%) rotate(180deg);
     }
@@ -76,33 +81,37 @@
     }
 
     .select-item(@cascader-prefix-cls, @cascader-item-prefix-cls);
-    .ivu-select-item span{
+
+    .ivu-select-item span {
         color: @error-color;
     }
 
-    &-dropdown{
+    &-dropdown {
         padding: 5px 0;
-        .@{select-dropdown-prefix-cls}-list{
+
+        .@{select-dropdown-prefix-cls}-list {
             max-height: 190px;
             box-sizing: border-box;
             overflow: auto;
         }
     }
 
-    &-not-found-tip{
+    &-not-found-tip {
         padding: 5px 0;
         text-align: center;
         color: @btn-disable-color;
-        li:not([class^=ivu-]){
+
+        li:not([class^=ivu-]) {
             list-style: none;
             margin-bottom: 0;
         }
     }
+
     &-not-found .@{select-dropdown-prefix-cls} {
         width: inherit;
     }
 
-    &-menu{
+    &-menu {
         display: inline-block;
         min-width: 100px;
         height: 180px;
@@ -116,20 +125,22 @@
         &:first-child {
 
         }
+
         &:last-child {
             border-right-color: transparent;
             margin-right: -1px;
         }
+
         &:only-child {
 
         }
 
-        & &-item{
+        & &-item {
             position: relative;
             padding-right: 36px;
             transition: all @transition-time @ease-in-out;
 
-            i{
+            i {
                 font-size: @font-size-small;
                 position: absolute;
                 right: 15px;
@@ -137,30 +148,35 @@
                 //margin-top: -6px;
                 transform: translateY(-50%);
             }
-            &-loading{
+
+            &-loading {
                 margin-top: -6px;
             }
 
-            &-active{
+            &-active {
                 background-color: @background-color-select-hover;
                 color: @primary-color;
             }
         }
     }
 }
-.@{cascader-prefix-cls}-transfer{
+
+.@{cascader-prefix-cls}-transfer {
     z-index: @zindex-transfer;
     .selectDropDown();
     .select-item(@cascader-prefix-cls, @cascader-item-prefix-cls);
-    .ivu-select-item span{
+
+    .ivu-select-item span {
         color: @error-color;
     }
+
     .@{cascader-prefix-cls} {
-        &-menu{
-            &-item{
+        &-menu {
+            &-item {
                 padding-right: 24px;
                 transition: all @transition-time @ease-in-out;
-                &-active{
+
+                &-active {
                     background-color: @background-color-select-hover;
                     color: @primary-color;
                 }
@@ -169,10 +185,17 @@
     }
 }
 
-.@{form-item-prefix-cls}-error{
+.@{form-item-prefix-cls}-error {
     .@{cascader-prefix-cls} {
-        &-arrow{
+        &-arrow {
             color: @error-color;
         }
+    }
+}
+
+.@{cascader-item-prefix-cls} {
+    .plugin {
+        color: @primary-color;
+        font-size: 12px
     }
 }

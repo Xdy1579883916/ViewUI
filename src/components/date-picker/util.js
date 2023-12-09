@@ -1,4 +1,4 @@
-import dateUtil from '../../utils/date';
+import dayjs from 'dayjs';
 
 export const toDate = function(date) {
     let _date = new Date(date);
@@ -29,11 +29,11 @@ export const isInRange = (time, a, b) => {
 export const formatDate = function(date, format) {
     date = toDate(date);
     if (!date) return '';
-    return dateUtil.format(date, format || 'yyyy-MM-dd');
+    return dayjs.format(date, format || 'yyyy-MM-dd');
 };
 
 export const parseDate = function(string, format) {
-    return dateUtil.parse(string, format || 'yyyy-MM-dd');
+    return dayjs.parse(string, format || 'yyyy-MM-dd');
 };
 
 export const getDayCountOfMonth = function(year, month) {

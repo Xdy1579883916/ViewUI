@@ -1,10 +1,21 @@
 <style lang="less">
     @import "../src/styles/index.less";
+
+    .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span {
+            margin: 5px 10px;
+        }
+    }
 </style>
 <template>
     <div class="container">
         <div>
-            <div>
+            <div class="list">
                 <span><router-link to="/split">Split</router-link></span>
                 <span><router-link to="/layout">Layout</router-link></span>
                 <span><router-link to="/affix">Affix</router-link></span>
@@ -68,7 +79,7 @@
     </div>
 </template>
 <script>
-    module.exports = {
+    export default {
         data: function() {
             return {
 

@@ -7,12 +7,22 @@
     </div>
 </template>
 <script>
+    import {h} from "vue";
+
     export default {
         data () {
             return {
                 value1: [],
                 value2: [],
-                data: [{
+                data: [
+                    {
+                        label: "新建分组", // 必填
+                        plugin: true, // 必填
+                        value: "addNewGroup", // 必填
+                        render: () => h("div", "新建分组"), // render函数 选填
+                        class: "xx" // 自定义的当行样式
+                    },
+                    {
                     value: 'beijing',
                     label: '北京',
                     children: [
@@ -29,7 +39,8 @@
                             label: '王府井'
                         }
                     ]
-                }, {
+                },
+                    {
                     value: 'jiangsu',
                     label: '江苏',
                     children: [
@@ -58,7 +69,8 @@
                             ]
                         }
                     ],
-                }]
+                },
+                ]
             };
         }
     };

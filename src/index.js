@@ -70,7 +70,6 @@ import mixinsLocale from './mixins/locale';
 import mixinsLink from './mixins/link';
 import setupDxbModal from './components/dxb-modal';
 
-
 const components = {
     Affix,
     Alert,
@@ -251,8 +250,9 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-const API = {
-    version: process.env.VERSION, // eslint-disable-line no-undef
+export const API = {
+    // eslint-disable-next-line no-undef
+    version: process.env.VERSION,
     locale: locale.use,
     i18n: locale.i18n,
     install,
@@ -276,4 +276,4 @@ API.lang = (code) => {
     else console.log(`The ${code} language pack is not loaded.`); // eslint-disable-line no-console
 };
 
-module.exports.default = module.exports = API;   // eslint-disable-line no-undef
+export default API;

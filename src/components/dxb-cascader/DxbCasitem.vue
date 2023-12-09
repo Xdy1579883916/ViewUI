@@ -118,11 +118,3 @@ export default {
     }
 };
 </script>
-<style lang="less">
-  .DxbCasitem{
-    .plugin{
-      color: var(--primary-color);
-      font-size: 12px;
-    }
-  }
-</style>
