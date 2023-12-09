@@ -1,6 +1,6 @@
 {
     "name": "view-design",
-    "version": "4.7.0-alpha.5",
+    "version": "4.7.0-alpha.5.1",
     "title": "ViewUI",
     "description": "A high quality UI components Library with Vue.js",
     "homepage": "http://www.iviewui.com",
@@ -14,7 +14,11 @@
         "ui",
         "framework"
     ],
-    "main": "dist/iview.mjs",
+    "exports": {
+        ".": {
+            "import": "./dist/iview.mjs"
+        }
+    },
     "type": "commonjs",
     "typings": "./types/index.d.ts",
     "types": "./types/index.d.ts",
@@ -61,8 +65,8 @@
         "@types/node": "^18.19.3",
         "@vitejs/plugin-vue2": "^2.3.1",
         "cross-env": "^5.2.1",
-        "eslint": "^8.55.0",
-        "eslint-plugin-vue": "^9.19.2",
+        "eslint": "^3.19.0",
+        "eslint-plugin-vue": "^2.1.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.10.0",
