@@ -140,11 +140,11 @@ export const DEFAULT_FORMATS = {
     date: 'YYYY-MM-DD',
     month: 'YYYY-MM',
     year: 'YYYY',
-    datetime: 'YYYY-MM-DD-HH-mm-ss',
+    datetime: 'YYYY-MM-DD HH-mm-ss',
     time: 'HH:mm:ss',
     timerange: 'HH:mm:ss',
     daterange: 'YYYY-MM-DD',
-    datetimerange: 'YYYY-MM-DD-HH-mm-ss'
+    datetimerange: 'YYYY-MM-DD HH-mm-ss'
 };
 
 // export const RANGE_SEPARATOR = ' - ';  // use picker.vue prop separator
