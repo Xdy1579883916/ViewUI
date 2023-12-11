@@ -275,4 +275,4 @@ export const API = {
     }
 };
 export default API;
-export {}
+export {};
