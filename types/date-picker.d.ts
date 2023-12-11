@@ -16,8 +16,8 @@ export declare class DatePicker extends Vue {
   value?: Date;
   /**
    * 展示的日期格式
-   * date | daterange?: yyyy-MM-dd
-   * datetime | datetimerange：yyyy-MM-dd HH:mm:ss
+   * date | daterange?: YYYY-MM-DD
+   * datetime | datetimerange：YYYY-MM-DD-HH-mm-ss
    * year：yyyy
    * month：yyyy-MM
    */

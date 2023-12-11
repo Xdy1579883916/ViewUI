@@ -29,11 +29,11 @@ export const isInRange = (time, a, b) => {
 export const formatDate = function(date, format) {
     date = toDate(date);
     if (!date) return '';
-    return dayjs.format(date, format || 'yyyy-MM-dd');
+    return dayjs(date).format(format || 'YYYY-MM-DD');
 };
 
 export const parseDate = function(string, format) {
-    return dayjs.parse(string, format || 'yyyy-MM-dd');
+    return dayjs(string).format(format || 'YYYY-MM-DD');
 };
 
 export const getDayCountOfMonth = function(year, month) {
@@ -137,14 +137,14 @@ export const formatDateLabels = (function() {
 
 // Parsers and Formaters
 export const DEFAULT_FORMATS = {
-    date: 'yyyy-MM-dd',
-    month: 'yyyy-MM',
-    year: 'yyyy',
-    datetime: 'yyyy-MM-dd HH:mm:ss',
+    date: 'YYYY-MM-DD',
+    month: 'YYYY-MM',
+    year: 'YYYY',
+    datetime: 'YYYY-MM-DD-HH-mm-ss',
     time: 'HH:mm:ss',
     timerange: 'HH:mm:ss',
-    daterange: 'yyyy-MM-dd',
-    datetimerange: 'yyyy-MM-dd HH:mm:ss'
+    daterange: 'YYYY-MM-DD',
+    datetimerange: 'YYYY-MM-DD-HH-mm-ss'
 };
 
 // export const RANGE_SEPARATOR = ' - ';  // use picker.vue prop separator

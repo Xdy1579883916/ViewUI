@@ -1,13 +1,13 @@
 const {prevMonth, nextMonth, getDayCountOfMonth} = require('../../../src/components/date-picker/util.js');
 
-// yyyy-mm-dd -> Date
+// YYYY-MM-DD -> Date
 function dateFromString(str) {
   str = str.split('-').map(Number);
   str[1] = str[1] - 1;
   return new Date(...str);
 }
 
-// Date -> yyyy-mm-dd
+// Date -> YYYY-MM-DD
 function dateToString(date) {
   return [date.getFullYear(), date.getMonth() + 1, date.getDate()].join('-');
 }

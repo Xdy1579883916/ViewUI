@@ -6,8 +6,6 @@ import pkg from './package.json';
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => {
     const isDev = mode === 'development';
-    // eslint-disable-next-line no-console
-    console.log(isDev);
     return {
         resolve: {
             alias: [
