@@ -20,6 +20,12 @@
                 <DatePicker type="daterange" :options="options2" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
             </Col>
         </Row>
+        <Row>
+            <Col span="12">
+                {{ value }}
+                <DatePicker v-model="value" type="datetimerange" placeholder="Select date and time(Excluding seconds)" style="width: 300px"></DatePicker>
+            </Col>
+        </Row>
     </div>
 </template>
 <script>
@@ -91,7 +97,8 @@
                             }
                         }
                     ]
-                }
+                },
+                value: [],
             }
         }
     }
