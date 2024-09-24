@@ -6,7 +6,14 @@
         <DatePicker type="year" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
 
         <DatePicker type="date" transfer show-week-numbers placeholder="Select date" style="width: 400px"></DatePicker>
-        <DatePicker type="datetime" show-week-numbers confirm placeholder="Select date" style="width: 400px"></DatePicker>
+        <DatePicker type="datetime" format="YYYY-MM-DD HH:mm:ss" clearable show-week-numbers confirm placeholder="Select date" style="width: 400px"></DatePicker>
+
+        <DatePicker
+            v-model="time"
+            format="YYYY-MM-DD HH:mm:ss"
+            placeholder="请输入创建时间"
+            type="datetime"
+        />
 
         <DatePicker type="daterange" transfer show-week-numbers placeholder="Select date" style="width: 400px"></DatePicker>
         <DatePicker type="datetimerange" transfer show-week-numbers placeholder="Select date" style="width: 400px"></DatePicker>
@@ -99,6 +106,7 @@
                     ]
                 },
                 value: [],
+                time: null,
             }
         }
     }
