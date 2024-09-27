@@ -1,6 +1,6 @@
 {
     "name": "view-design",
-    "version": "4.7.0-alpha.12",
+    "version": "4.7.0-alpha.13",
     "title": "ViewUI",
     "description": "这是自己维护的Vue2版本 ViewUI",
     "homepage": "https://v4.iviewui.com/docs/introduce",
@@ -47,12 +47,11 @@
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "async-validator": "^3.5.2",
-        "dayjs": "^1.11.10",
+        "dayjs": "^1.11.13",
         "deepmerge": "^2.2.1",
         "element-resize-detector": "^1.2.4",
         "js-calendar": "^1.2.3",
         "lodash": "^4.17.21",
-        "lodash.throttle": "^4.1.1",
         "tinycolor2": "^1.6.0",
         "v-click-outside-x": "^3.7.1",
         "vue": "^2.7.16",
@@ -62,11 +61,11 @@
         "vue": "^2.6.10"
     },
     "devDependencies": {
-        "@types/node": "^18.19.8",
+        "@types/node": "^18.19.53",
         "@vitejs/plugin-vue2": "^2.3.1",
         "cross-env": "^5.2.1",
-        "eslint": "^8.56.0",
-        "eslint-plugin-vue": "^9.20.1",
+        "eslint": "^8.57.1",
+        "eslint-plugin-vue": "^9.28.0",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.10.0",
@@ -75,7 +74,7 @@
         "less": "^2.7.3",
         "tslint": "^5.20.1",
         "typescript": "^3.9.10",
-        "vite": "^5.0.11"
+        "vite": "^5.4.8"
     },
     "engines": {
         "node": ">=8.9.1",

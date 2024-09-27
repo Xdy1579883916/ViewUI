@@ -660,6 +660,12 @@
                         tree: true
                     },
                     {
+                        title: '姓名2',
+                        key: 'nameObj.zh',
+                        defaultValue: '-',
+                        width: 100,
+                    },
+                    {
                         title: 'Age',
                         key: 'age',
                         sortable: true,
@@ -712,6 +718,10 @@
                     {
                         id: '100',
                         name: 'John Brown',
+                        nameObj: {
+                            zh: '张三',
+                            en: "John Brown"
+                        },
                         age: 118,
                         address: 'New York No. 1 Lake Park',
                         date: '2016-10-03',
