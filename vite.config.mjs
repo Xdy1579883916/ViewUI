@@ -29,7 +29,7 @@ export default defineConfig(({mode}) => {
                 formats: ['es'],
             },
             rollupOptions: {
-                external: ['vue', 'dayjs', 'lodash', 'vue-router'],
+                external: ['vue', 'dayjs', 'lodash-es', 'vue-router'],
             },
         },
         define: {

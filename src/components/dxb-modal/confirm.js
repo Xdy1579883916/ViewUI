@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Modal from './modal.vue';
 import Button from '../button/button.vue';
 import Locale from '../../mixins/locale';
-import {clone} from 'lodash';
+import {clone} from 'lodash-es';
 import DxbModalHeader from './DxbModalHeader.vue';
 
 const prefixCls = 'ivu-modal-confirm';

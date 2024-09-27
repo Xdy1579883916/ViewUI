@@ -1,5 +1,5 @@
 import Modal from './confirm';
-import { last, dropRight, } from 'lodash';
+import { last, dropRight, } from 'lodash-es';
 
 function setupDxbModal(initVueOpt = {}) {
     let modalInstance = [];

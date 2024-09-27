@@ -45,7 +45,7 @@
     import Icon from '../icon/icon.vue';
     import Checkbox from '../checkbox/checkbox.vue';
     import Tooltip from '../tooltip/tooltip.vue';
-    import { get } from 'lodash';
+    import { get } from 'lodash-es';
 
     export default {
         name: 'TableCell',

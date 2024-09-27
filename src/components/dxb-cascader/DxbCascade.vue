@@ -102,7 +102,7 @@ import {oneOf} from '../../utils/assist';
 import Emitter from '../../mixins/emitter';
 import Locale from '../../mixins/locale';
 import mixinsForm from '../../mixins/form';
-import {clone} from 'lodash';
+import {clone} from 'lodash-es';
 
 const prefixCls = 'ivu-cascader';
 const selectPrefixCls = 'ivu-select';
