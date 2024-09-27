@@ -45,7 +45,7 @@
     import Icon from '../icon/icon.vue';
     import Checkbox from '../checkbox/checkbox.vue';
     import Tooltip from '../tooltip/tooltip.vue';
-    import { get } from 'lodash-es';
+    import {getRow} from "@/utils/getRow";
 
     export default {
         name: 'TableCell',
@@ -138,7 +138,7 @@
             },
             // 为获取cell数据, key提供path支持、defaultValue默认值支持
             rowData() {
-                return get(this.row, this.column.key, this.column.defaultValue);
+                return getRow(this.row, this.column.key, this.column.defaultValue);
             }
         },
         methods: {
