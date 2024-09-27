@@ -33,9 +33,7 @@ export default defineConfig(({mode}) => {
             },
         },
         define: {
-            'process.env': JSON.stringify({
-                VERSION: pkg.version,
-            }),
+            'process.env.VERSION': JSON.stringify(pkg.version),
         }
     };
 });
