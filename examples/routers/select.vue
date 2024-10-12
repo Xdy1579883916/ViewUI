@@ -1,7 +1,9 @@
 <template>
     <div style="margin: 100px;">
         <Select v-model="model1" filterable style="width:200px" prefix="ios-albums">
-            <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+            <Option v-for="item in cityList" :value="item.value" :key="item.value">
+                {{ item.label }}
+            </Option>
         </Select>
 
         <Select v-model="model10" filterable :max-tag-count="2" multiple style="width:400px">
@@ -126,7 +128,7 @@
                         label: 'Canberra'
                     }
                 ],
-                model1: '',
+                model1: 'London',
                 model10: [],
                 model12: [],
                 model13: '',

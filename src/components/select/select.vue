@@ -96,7 +96,7 @@
     import Icon from '../icon';
     import {directive as clickOutside} from '../../directives/v-click-outside-x';
     import TransferDom from '../../directives/transfer-dom';
-    import { oneOf, findComponentsDownward } from '../../utils/assist';
+    import {findComponentsDownward, oneOf} from '@/utils/assist';
     import Emitter from '../../mixins/emitter';
     import mixinsForm from '../../mixins/form';
     import Locale from '../../mixins/locale';
@@ -761,19 +761,17 @@
                   // the 'dropdown list' should be stay hidden.
                   // [issue #5150]
                     if (this.autoComplete) {
-                        let isInputFocused =
-                            document.hasFocus &&
+                        this.visible = document.hasFocus &&
                             document.hasFocus() &&
                             document.activeElement === this.$el.querySelector('input');
-                        this.visible = isInputFocused;
                     } else {
                         this.visible = true;
                     }
                 }
-
+                // 修复开启 filterable 时，过滤行为异常
+                this.filterQueryChange = query !== this.query
                 this.query = query;
                 this.unchangedQuery = this.visible;
-                this.filterQueryChange = true;
             },
             toggleHeaderFocus({type}){
                 if (this.itemDisabled) {
